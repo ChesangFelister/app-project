@@ -20,13 +20,15 @@ public class AddNoteActivity extends AppCompatActivity {
     Button btnAddPhoto;
     Button btnAddVoiceNote;
     Button btnSave;
+    String title;
+    String note;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_note);
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+      setSupportActionBar(toolbar);
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -39,11 +41,25 @@ public class AddNoteActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"you have clicked a save button",Toast.LENGTH_LONG).show();
+                title=etTitle.getText().toString();
+                note=etNote.getText().toString();
+
+//                Toast.makeText(getApplicationContext(),"you have clicked a save button",Toast.LENGTH_LONG).show();
+
 
             }
         });
 
     }
 
-}
+
+
+
+
+
+
+
+
+    }
+
+
